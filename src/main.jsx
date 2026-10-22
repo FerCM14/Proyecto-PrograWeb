@@ -15,8 +15,71 @@ import { UsuarioProvider } from './context/UsuarioContext';
 import { AccesoDenegadoPage } from './Pages/comun/AccesoDenegadoPage';
 import { NoEncontradaPage } from './Pages/comun/NoEncontradaPage';
 
+import { RutaProtegida } from './components/RutaProtegida';
+import { ROLES } from './data/contratoDatos';
+import { InventarioPage } from './Pages/encargado/inventario/InventarioPage';
+import { FormularioEquipoPage } from './Pages/encargado/inventario/FormularioEquipoPage';
+import { UnidadesEquipoPage } from './Pages/encargado/inventario/UnidadesEquipoPage';
+import { CondicionesPrestamoPage } from './Pages/encargado/inventario/CondicionesPrestamoPage';
+
 const router = createBrowserRouter([
   { path: '/', element: <App /> },
+  {
+    path: '/encargado/inventario',
+    element: (
+      <RutaProtegida allowedRoles={[ROLES.ENCARGADO]}>
+        <InventarioPage />
+      </RutaProtegida>
+    )
+  },
+  {
+    path: '/inventario',
+    element: (
+      <RutaProtegida allowedRoles={[ROLES.ENCARGADO]}>
+        <InventarioPage />
+      </RutaProtegida>
+    )
+  },
+  {
+    path: '/encargado/inventario/nuevo',
+    element: (
+      <RutaProtegida allowedRoles={[ROLES.ENCARGADO]}>
+        <FormularioEquipoPage />
+      </RutaProtegida>
+    )
+  },
+  {
+    path: '/encargado/equipo/nuevo',
+    element: (
+      <RutaProtegida allowedRoles={[ROLES.ENCARGADO]}>
+        <FormularioEquipoPage />
+      </RutaProtegida>
+    )
+  },
+  {
+    path: '/encargado/inventario/:id/unidades',
+    element: (
+      <RutaProtegida allowedRoles={[ROLES.ENCARGADO]}>
+        <UnidadesEquipoPage />
+      </RutaProtegida>
+    )
+  },
+  {
+    path: '/encargado/inventario/:id/condiciones',
+    element: (
+      <RutaProtegida allowedRoles={[ROLES.ENCARGADO]}>
+        <CondicionesPrestamoPage />
+      </RutaProtegida>
+    )
+  },
+  {
+    path: '/encargado/inventario/:id/editar',
+    element: (
+      <RutaProtegida allowedRoles={[ROLES.ENCARGADO]}>
+        <FormularioEquipoPage />
+      </RutaProtegida>
+    )
+  },
   { path: '/403', element: <AccesoDenegadoPage /> },
   { path: '/acceso-denegado', element: <AccesoDenegadoPage /> },
   { path: '/404', element: <NoEncontradaPage /> },
