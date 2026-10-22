@@ -1,0 +1,41 @@
+.estado-vacio-card {
+  padding: 48px 24px;
+  background-color: var(--surface);
+  border: 1px dashed var(--border);
+  border-radius: var(--radius);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+  width: 100%;
+}
+
+.estado-vacio-icono {
+  font-size: 36px;
+  line-height: 36px;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+  font-family: var(--font-family-mono);
+}
+
+.estado-vacio-titulo {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.estado-vacio-descripcion {
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--text-muted);
+  max-width: 480px;
+  margin-bottom: 24px;
+}
+
+.estado-vacio-btn {
+  min-width: 140px;
+}

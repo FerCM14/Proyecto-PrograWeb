@@ -1,0 +1,142 @@
+.tarjeta-equipo {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: border-color 0.15s ease;
+}
+
+.tarjeta-equipo:hover {
+  border-color: var(--primary);
+}
+
+.tarjeta-foto-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background-color: #EBF0F2;
+  overflow: hidden;
+}
+
+.tarjeta-foto {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.tarjeta-categoria-tag {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: rgba(15, 58, 67, 0.85);
+  color: #FFFFFF;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.tarjeta-info {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.tarjeta-nombre {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.tarjeta-nombre a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.tarjeta-nombre a:hover {
+  color: var(--primary);
+}
+
+.tarjeta-marca-modelo {
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--text-muted);
+  margin-bottom: 14px;
+}
+
+.tarjeta-disponibilidad-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  margin-top: auto;
+}
+
+.disponibilidad-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.disponibilidad-badge.disponible {
+  color: var(--success);
+}
+.disponibilidad-badge.disponible .disp-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--success);
+}
+
+.disponibilidad-badge.agotado {
+  color: var(--warning);
+}
+.disponibilidad-badge.agotado .disp-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--warning);
+}
+
+.duracion-tag {
+  font-size: 12px;
+  color: var(--text-muted);
+  background-color: var(--bg);
+  padding: 2px 6px;
+  border-radius: 3px;
+  border: 1px solid var(--border);
+}
+
+.tarjeta-acciones {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.btn-card {
+  min-height: 38px;
+  height: 38px;
+  font-size: 13px;
+  padding: 0 10px;
+}
+
+.btn-accent {
+  background-color: var(--accent);
+  color: #0F3A43;
+  border: 1px solid var(--accent);
+  font-weight: 700;
+}
+
+.btn-accent:hover:not(:disabled) {
+  background-color: #c79503;
+  border-color: #c79503;
+}

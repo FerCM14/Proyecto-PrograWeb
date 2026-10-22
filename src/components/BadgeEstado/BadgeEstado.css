@@ -1,0 +1,78 @@
+.badge-estado {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 8px;
+  border-radius: var(--radius);
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.badge-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* Éxito - #1E7F4D */
+.badge-success {
+  background-color: #E8F5E9;
+  color: #1E7F4D;
+  border: 1px solid rgba(30, 127, 77, 0.2);
+}
+.badge-success .badge-dot {
+  background-color: #1E7F4D;
+}
+
+/* Información / Prestada - #3B6FA8 */
+.badge-info {
+  background-color: #EBF3FA;
+  color: #3B6FA8;
+  border: 1px solid rgba(59, 111, 168, 0.2);
+}
+.badge-info .badge-dot {
+  background-color: #3B6FA8;
+}
+
+/* Advertencia / Mantenimiento - #B7791F */
+.badge-warning {
+  background-color: #FEF3C7;
+  color: #B7791F;
+  border: 1px solid rgba(183, 121, 31, 0.25);
+}
+.badge-warning .badge-dot {
+  background-color: #B7791F;
+}
+
+/* Peligro / Vencido en rojo sin excepción - #B4322B */
+.badge-danger {
+  background-color: #FEE2E2;
+  color: #B4322B;
+  border: 1px solid rgba(180, 50, 43, 0.25);
+  font-weight: 700;
+}
+.badge-danger .badge-dot {
+  background-color: #B4322B;
+}
+
+/* Muted / Devuelta - #5E7073 */
+.badge-muted {
+  background-color: #EEF2F3;
+  color: #5E7073;
+  border: 1px solid var(--border);
+}
+.badge-muted .badge-dot {
+  background-color: #5E7073;
+}
+
+.badge-default {
+  background-color: var(--primary-soft);
+  color: var(--primary-dark);
+  border: 1px solid var(--border);
+}
+.badge-default .badge-dot {
+  background-color: var(--primary);
+}
